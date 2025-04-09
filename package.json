@@ -1,0 +1,20 @@
+{
+  "name": "webinar-poziomy-testow",
+  "version": "1.0.0",
+  "description": "Project used during webinar Testing on Different Levels: GUI • API • Visual • WebSocket • Mocking",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:codegen": "npx playwright codegen ",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:u": "npx playwright test -u"
+  },
+  "keywords": [],
+  "author": "jaktestowac.pl",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0"
+  }
+}
