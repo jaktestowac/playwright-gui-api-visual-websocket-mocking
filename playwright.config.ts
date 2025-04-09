@@ -10,6 +10,10 @@ export default defineConfig({
     ['json', { outputFile: 'test-results/results.json' }],
   ],
   use: {
+    /*
+    We use https://github.com/jaktestowac/gad-gui-api-demo as a test application.
+    You need to run it locally to run the tests.
+    */
     baseURL: 'http://127.0.0.1:3000',
     trace: 'on-first-retry',
   },

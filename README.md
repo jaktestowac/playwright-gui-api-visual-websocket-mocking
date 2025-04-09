@@ -6,7 +6,7 @@ _"Testing on Different Levels: GUI • API • Visual • WebSocket • Mocking"
 
 (Polish: _"Testy na różnych poziomach: GUI • API • Wizualne • WebSocket • Mockowanie"_)
 
-by [jaktestowac.pl](jaktestowac.pl) team.
+by [jaktestowac.pl](https://jaktestowac.pl/contribution-playwright/) team.
 
 More:
 
