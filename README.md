@@ -41,6 +41,20 @@ Before you start, make sure you have the following installed:
 - [Node.js](https://nodejs.org) (v20 or later LTS version)
 - [npm](https://www.npmjs.com/)
 - our free application to practice automation - [🦎 GAD](https://github.com/jaktestowac/gad-gui-api-demo)
+- [VSCode] (https://code.visualstudio.com) IDE for coding
+
+## Project Structure
+
+Each test file (with `.spec`extension) contains tests on different levels.
+
+Each test file is fully independent form other so you can modify code without breaking others tests.
+
+Configuration in file `playwright.config.ts` contain all global settings for project.
+
+Debug each test step by step to get deep understanding of test logic.
+
+Pay attention of settings in Playwright Test extension (Testing tab). In PLAYWRIGHT view in SETUP:
+Set `Show browser` or `Show trace viewer` options to debug efficiently. 
 
 ## Setup
 
@@ -56,6 +70,16 @@ Before you start, make sure you have the following installed:
    ```bash
    npm install
    ```
+
+3. Optionally install Playwright browsers:
+
+   ```bash
+   npx playwright install
+   ```
+
+4. Optionally install extensions for VSCode:
+
+  Navigate to "Extensions" tab in VSCode, filter extensions using "@recommended" filter
 
 ## Running Tests
 
@@ -113,4 +137,4 @@ Feel free to reach out to us:
 
 Happy testing and automating tests!🚀
 
-jaktestowac.pl Team ❤️💚
+jaktestowac.pl Team 💚❤️
