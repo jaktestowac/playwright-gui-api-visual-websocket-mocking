@@ -54,7 +54,7 @@ Configuration in file `playwright.config.ts` contain all global settings for pro
 Debug each test step by step to get deep understanding of test logic.
 
 Pay attention of settings in Playwright Test extension (Testing tab). In PLAYWRIGHT view in SETUP:
-Set `Show browser` or `Show trace viewer` options to debug efficiently. 
+Set `Show browser` or `Show trace viewer` options to debug efficiently.
 
 ## Setup
 
@@ -79,7 +79,7 @@ Set `Show browser` or `Show trace viewer` options to debug efficiently.
 
 4. Optionally install extensions for VSCode:
 
-  Navigate to "Extensions" tab in VSCode, filter extensions using "@recommended" filter
+Navigate to "Extensions" tab in VSCode, filter extensions using "@recommended" filter
 
 ## Running Tests
 

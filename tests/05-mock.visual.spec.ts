@@ -11,7 +11,7 @@ test.describe('Chat visual tests (mocking)', () => {
 
     await page.route('**/api/v2/data/random/weather**', async (route) => {
       await route.fulfill({ json: mockWeatherData });
-    //   await route.fulfill({ json: mockWeatherData2 });
+      //   await route.fulfill({ json: mockWeatherData2 });
     });
 
     await page.goto('/practice/websocket-chat-v5.html'); // Open the chat page

@@ -38,7 +38,7 @@ test.describe('Chat visual tests', () => {
         await route.continue({
           url: `${baseURL}/api/v2/data/random/weather?location=Berlin`,
         });
-      }
+      },
     );
 
     await page.reload();

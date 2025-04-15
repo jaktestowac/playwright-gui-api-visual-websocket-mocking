@@ -86,8 +86,6 @@ test.describe('Chat functionality tests - mock websockets', () => {
       await expect(chatPage.messagesGeneral(page)).toContainText(messageText2);
       await expect(chatPage.messagesGeneral(page2)).toContainText(messageText2);
     });
-
-
   });
 });
 

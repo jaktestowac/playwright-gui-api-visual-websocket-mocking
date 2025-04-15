@@ -48,24 +48,22 @@ test.describe('Wind values tests', () => {
           contentType: 'application/json',
           body: JSON.stringify(mockResponse),
         });
-      }
+      },
     );
 
     await page.reload(); // Reload the page to apply the mock response
     await expect(page.getByTestId('wind')).toBeVisible();
-    await expect(page.getByTestId('wind')).toHaveText(`${customWindValue} km/h`);
+    await expect(page.getByTestId('wind')).toHaveText(
+      `${customWindValue} km/h`,
+    );
   });
 
-  const data = [
-    '-100.0',
-    '0.0',
-    'x',
-    '100'
-  ]
+  const data = ['-100.0', '0.0', 'x', '100'];
 
-  data.forEach(element => {
-
-    test(`should show wind value mock only wind ${element}`, async ({ page }) => {
+  data.forEach((element) => {
+    test(`should show wind value mock only wind ${element}`, async ({
+      page,
+    }) => {
       const customWindValue = element;
       await page.route(
         '/api/v2/data/random/weatherToday?location=Warsaw',
@@ -74,21 +72,21 @@ test.describe('Wind values tests', () => {
           const responseJson = await response.json();
 
           // Modify only the wind value
-          responseJson.weather[0].wind = `${customWindValue}`
+          responseJson.weather[0].wind = `${customWindValue}`;
 
           // Fulfill with the modified JSON response
           await route.fulfill({
             response,
             body: JSON.stringify(responseJson),
           });
-
-        }
+        },
       );
 
       await page.reload(); // Reload the page to apply the mock response
       await expect(page.getByTestId('wind')).toBeVisible();
-      await expect(page.getByTestId('wind')).toHaveText(`${customWindValue} km/h`);
+      await expect(page.getByTestId('wind')).toHaveText(
+        `${customWindValue} km/h`,
+      );
     });
-
   });
 });

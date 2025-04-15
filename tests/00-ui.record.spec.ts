@@ -5,7 +5,9 @@ test('test', async ({ page }) => {
   await page.getByRole('cell', { name: 'JohnWeb' }).click();
   await page.getByTestId('login-button').click();
   await page.getByTestId('weather-title').getByText('Weather').click();
-  await expect(page.getByTestId('weather-title').getByText('Weather')).toBeVisible();
+  await expect(
+    page.getByTestId('weather-title').getByText('Weather'),
+  ).toBeVisible();
   await expect(page.getByTestId('join-chat-button')).toBeVisible();
   await page.getByTestId('join-chat-button').click();
   await page.getByTestId('message-input-general').click();

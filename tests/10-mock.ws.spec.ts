@@ -7,14 +7,14 @@ test.describe('Chat functionality tests - mock websockets', () => {
     message: 'Hello! Sending mocked data to the server!',
     recipient: null,
   };
-  
+
   const mockedData2 = {
     type: 'practiceChatMessage',
     username: 'John🔥🔥🔥',
     message: 'Mocking @#$%^&*(',
     recipient: null,
   };
-  
+
   test.beforeEach(async ({ page }) => {
     await page.routeWebSocket('', (ws) => {
       // from page to server
@@ -41,7 +41,6 @@ test.describe('Chat functionality tests - mock websockets', () => {
       await expect(chatPage.statusText(page)).toContainText('Disconnected');
     });
 
-   
     await test.step('User 1 clicks join chat', async () => {
       await chatPage.joinChatButton(page).click();
       await expect(chatPage.statusText(page)).toContainText('Connected');
@@ -49,16 +48,23 @@ test.describe('Chat functionality tests - mock websockets', () => {
 
     await test.step('User 1 check message 1', async () => {
       // Assert:
-      await expect(chatPage.messagesGeneral(page)).toContainText(mockedData1.message);
-      await expect(chatPage.messagesGeneral(page)).toContainText(mockedData1.username);
+      await expect(chatPage.messagesGeneral(page)).toContainText(
+        mockedData1.message,
+      );
+      await expect(chatPage.messagesGeneral(page)).toContainText(
+        mockedData1.username,
+      );
     });
 
     await test.step('User 1 check message 2', async () => {
       // Assert:
-      await expect(chatPage.messagesGeneral(page)).toContainText(mockedData2.message);
-      await expect(chatPage.messagesGeneral(page)).toContainText(mockedData2.username);
+      await expect(chatPage.messagesGeneral(page)).toContainText(
+        mockedData2.message,
+      );
+      await expect(chatPage.messagesGeneral(page)).toContainText(
+        mockedData2.username,
+      );
     });
-   
   });
 });
 
