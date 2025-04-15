@@ -1,5 +1,12 @@
 import { test, expect } from '@playwright/test';
 
+/*
+For easier structure we skipped page object pattern.
+In real life we would use it to separate the logic of the page and the tests.
+For more implementation details check the video:
+https://www.youtube.com/playlist?list=PLfKhn9AcZ-cD2TCB__K7NP5XARaCzZYn7
+*/
+
 test.describe('Chat functionality tests', () => {
   const username = 'JohnWeb';
   const password = '123';
